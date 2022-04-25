@@ -1,0 +1,21 @@
+const { Router } = require('express')
+const PessoaController = require('../controllers/pessoaController.js')
+
+const router = Router()
+
+router.get('/pessoas', PessoaController.PegaTodasAsPessoas)
+router.get('/pessoas/ativas', PessoaController.PegaPessoasAtivas)
+router.get('/pessoas/:id', PessoaController.PegaUmaPessoa)
+router.get('/pessoas/:estudanteid/matricula', PessoaController.pegaMatricula)
+router.get('/pessoas/matricula/:turmaid/confirmadas', PessoaController.pegaMatriculaPorTurma)
+router.get('/pessoas/matricula/lotada', PessoaController.pegaTurmasLotadas)
+router.post('/pessoas', PessoaController.criaPessoa)
+router.put('/pessoas/:id', PessoaController.atualizaPessoa)
+router.delete('/pessoas/:id', PessoaController.apagaPessoa)
+router.get('/pessoas/:estudanteid/matricula/:matriculaid', PessoaController.PegaUmaMatricula)
+router.post('/pessoas/:estudanteid/matricula', PessoaController.criaMatricula)
+router.post('/pessoas/:id/restaura', PessoaController.restauraPessoa)
+router.post('/pessoas/:estudanteid/cancela', PessoaController.cancelaPessoa)
+router.put('/pessoas/:estudanteid/matricula/:matriculaid', PessoaController.atualizaMatricula)
+router.delete('/pessoas/:estudanteid/matricula/:matriculaid', PessoaController.apagaMatricula)
+module.exports = router
