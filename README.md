@@ -1,0 +1,3 @@
+# TrainingApiSchool
+Uma simples api para treinar mais com node.js, Sequelize e MySQL e REST
+A API ESTÁ INCOMPLETA!!! será atualizada por completo no futuro... 
